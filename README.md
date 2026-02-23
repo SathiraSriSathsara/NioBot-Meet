@@ -104,6 +104,7 @@ Core:
 - `DB_HOST`, `DB_USER`, `DB_PASS`, `DB_NAME`
 - `RECORDINGS_DIR`
 - `BOT_EMAIL`, `BOT_PASS`
+- `JOIN_AS_GUEST`, `GUEST_NAME`
 
 Optional:
 

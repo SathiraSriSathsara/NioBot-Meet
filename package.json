@@ -8,7 +8,8 @@
     "start:api": "node src/api/server.js",
     "start:worker": "node src/worker/worker.js",
     "dev:api": "nodemon src/api/server.js",
-    "dev:worker": "nodemon src/worker/worker.js"
+    "dev:worker": "nodemon src/worker/worker.js",
+    "auth:google": "node src/worker/recorder/loginGoogle.playwright.js"
   },
   "keywords": [],
   "author": "",

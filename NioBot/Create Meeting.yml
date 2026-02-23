@@ -1,0 +1,24 @@
+info:
+  name: Create Meeting
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: http://localhost:5055/meetings
+  body:
+    type: json
+    data: |-
+      {
+        "title": "Demo",
+        "meet_url": "https://meet.google.com/baf-khxd-dcf",
+        "scheduled_at": "2026-02-24 01:06:00",
+        "duration_sec": 600
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
