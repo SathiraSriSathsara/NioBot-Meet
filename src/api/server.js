@@ -57,7 +57,7 @@ app.post("/meetings", async (req, res) => {
     );
 
     await db.execute(
-      "INSERT INTO jobs (type, run_at, payload) VALUES ('RECORD_MEET', ?, CAST(? AS JSON))",
+      "INSERT INTO jobs (type, run_at, payload) VALUES ('RECORD_MEET', ?, ?)",
       [scheduledAtUtc, JSON.stringify({ meeting_id: id })],
     );
 
