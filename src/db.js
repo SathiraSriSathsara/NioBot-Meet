@@ -8,4 +8,14 @@ export const db = mysql.createPool({
   database: process.env.DB_NAME,
   waitForConnections: true,
   connectionLimit: 10,
+  timezone: "Z", // treat dates as UTC when reading/writing
+});
+
+// Ensure MySQL session uses UTC as well
+db.on?.("connection", async (conn) => {
+  try {
+    await conn.query("SET time_zone = '+00:00'");
+  } catch {
+    // ignore if not supported by driver version
+  }
 });
